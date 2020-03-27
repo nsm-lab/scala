@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome!
 
 This is the official repository for the [Scala Programming Language](http://www.scala-lang.org)
@@ -266,3 +267,7 @@ Community builds run on the Scala Jenkins instance.  The jobs are
 named `..-integrate-community-build`. See the
 [scala/community-builds](https://github.com/scala/community-builds)
 repo.
+=======
+# scala
+The Scala programming language
+>>>>>>> 3ebba072b13970c73e733782b1fddd9065acbfa1
