@@ -1,0 +1,9 @@
+t5078.scala:7: error: object Foo is not a case class, nor does it have a valid unapply/unapplySeq member
+Note: def unapply: Option[Int] exists in object Foo, but it cannot be used as an extractor: an unapply method must accept a single argument
+    val Foo(x1) = 1
+        ^
+t5078.scala:8: error: object Foo2 is not a case class, nor does it have a valid unapply/unapplySeq member
+Note: def unapply(): Option[Int] exists in object Foo2, but it cannot be used as an extractor: an unapply method must accept a single argument
+    val Foo2(y2) = 2
+        ^
+2 errors

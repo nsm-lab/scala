@@ -1,0 +1,13 @@
+sip23-override.scala:24: error: incompatible type in overriding
+val f2: 4 (defined in trait Overridden);
+ found   : 5
+ required: 4
+  override val f2: 5 = 5
+               ^
+sip23-override.scala:28: error: incompatible type in overriding
+def f5: 4 (defined in trait Overridden);
+ found   : 5
+ required: 4
+  override def f5: 5 = 5
+               ^
+2 errors

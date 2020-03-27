@@ -1,0 +1,21 @@
+accesses.scala:23: error: weaker access privileges in overriding
+private[package p2] def f2(): Unit (defined in class A)
+  override should not be private
+  private def f2(): Unit = ()
+              ^
+accesses.scala:24: error: weaker access privileges in overriding
+protected def f3(): Unit (defined in class A)
+  override should at least be protected
+  private[p2] def f3(): Unit = ()
+                  ^
+accesses.scala:25: error: weaker access privileges in overriding
+private[package p1] def f4(): Unit (defined in class A)
+  override should at least be private[p1]
+  private[p2] def f4(): Unit
+                  ^
+accesses.scala:26: error: weaker access privileges in overriding
+protected[package p1] def f5(): Unit (defined in class A)
+  override should at least be protected[p1]
+  protected[p2] def f5(): Unit
+                    ^
+4 errors

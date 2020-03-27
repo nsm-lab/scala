@@ -1,0 +1,12 @@
+unreachablechar.scala:6: warning: patterns after a variable pattern cannot match (SLS 8.1.1)
+    case _ => println("stuff");
+         ^
+unreachablechar.scala:7: warning: unreachable code due to variable pattern on line 6
+    case 'f' => println("not stuff?");
+                       ^
+unreachablechar.scala:7: warning: unreachable code
+    case 'f' => println("not stuff?");
+                       ^
+error: No warnings can be incurred under -Werror.
+3 warnings
+1 error

@@ -1,0 +1,13 @@
+
+scala> val x = ""; s"$x"
+val x: String = ""
+val res0: String = ""
+
+scala> val s"$y" = ""
+val y: String = ""
+
+scala> val x = ""; s"$x"
+val x: String = ""
+val res1: String = ""
+
+scala> :quit

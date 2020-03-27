@@ -1,0 +1,12 @@
+override-concrete-type.scala:13: error: incompatible type in overriding
+type A1 = Something (defined in class Foo)
+   (Equivalent type required when overriding a type alias.)
+  override type A1 = Something with Serializable
+                ^
+override-concrete-type.scala:14: error: incompatible type in overriding
+type A2 <: Something (defined in class Foo);
+ found   : Any
+ required:  <: Something
+  override type A2 = Any
+                ^
+2 errors

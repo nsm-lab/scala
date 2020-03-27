@@ -1,0 +1,18 @@
+{
+  @new Ann(bar = "1", quux = Array("2", "3"), baz = new SuppressWarnings(value = Array("hups"))) class C extends AnyRef {
+    def <init>() = {
+      super.<init>();
+      ()
+    }
+  };
+  ()
+}
+{
+  @Ann(bar = "1", quux = ["2", "3"], baz = SuppressWarnings(value = ["hups"])) class C extends AnyRef {
+    def <init>(): C = {
+      C.super.<init>();
+      ()
+    }
+  };
+  ()
+}

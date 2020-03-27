@@ -1,0 +1,4 @@
+LinkedHashMap(a -> a, b -> b, c -> c)
+LinkedHashMap(a -> a, b -> b, c -> c)
+LinkedHashSet(a, b, c, d, e)
+LinkedHashSet(a, b, c, d, e)

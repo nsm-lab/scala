@@ -1,0 +1,5 @@
+
+scala> object A
+object A
+
+scala> :quit

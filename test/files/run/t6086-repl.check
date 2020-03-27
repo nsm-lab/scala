@@ -1,0 +1,8 @@
+
+scala> case class X(s: String)
+class X
+
+scala> scala.reflect.runtime.universe.typeOf[X]
+val res0: reflect.runtime.universe.Type = X
+
+scala> :quit

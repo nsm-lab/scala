@@ -1,0 +1,8 @@
+TreeMap(2 -> Hello, 1 -> World)
+TreeMap(5 -> Foo, 4 -> Bar)
+TreeMap(5 -> Foo, 4 -> Bar, 2 -> Hello, 1 -> World)
+TreeMap(3 -> ?, 2 -> Hello, 1 -> World)
+TreeMap(2 -> Hello, 1 -> World)
+TreeMap(5 -> Foo, 4 -> Bar)
+TreeMap(5 -> Foo, 4 -> Bar, 2 -> Hello, 1 -> World)
+TreeMap(3 -> ?, 2 -> Hello, 1 -> World)

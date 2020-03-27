@@ -1,0 +1,8 @@
+
+scala> val n = 2
+val n: Int = 2
+
+scala>     () => n
+val res0: () => Int = <function>
+
+scala> :quit

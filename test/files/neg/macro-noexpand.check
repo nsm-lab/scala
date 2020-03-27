@@ -1,0 +1,4 @@
+Macros_Test_2.scala:8: error: not found: value x
+  foo(x)
+      ^
+1 error

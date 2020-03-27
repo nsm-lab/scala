@@ -1,0 +1,7 @@
+t708.scala:8: error: incompatible type in overriding
+private[trait A] type S <: A.this.T (defined in trait X);
+ found   : Any
+ required:  <: A.this.T
+    override private[A] type S = Any;
+                             ^
+1 error

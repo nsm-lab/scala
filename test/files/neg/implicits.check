@@ -1,0 +1,19 @@
+implicits.scala:38: error: type mismatch;
+ found   : test2.HSome[String,test2.HMap]
+ required: Int
+  foo(set)
+      ^
+implicits.scala:46: error: type mismatch;
+ found   : Iterable[_]
+ required: scala.collection.IterableOnce[Mxml]
+                case s: scala.collection.Iterable[_] => s
+                                                        ^
+implicits.scala:47: error: type mismatch;
+ found   : Any
+ required: Mxml
+                case a => List(a)
+                               ^
+implicits.scala:59: error: could not find implicit value for parameter x: Nothing
+  foo {
+      ^
+4 errors

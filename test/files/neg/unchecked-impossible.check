@@ -1,0 +1,6 @@
+unchecked-impossible.scala:7: error: pattern type is incompatible with expected type;
+ found   : Seq[A]
+ required: T2[Int,Int]
+    case Seq(x) =>
+            ^
+1 error

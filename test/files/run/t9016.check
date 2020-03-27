@@ -1,0 +1,10 @@
+
+scala> """a
+| b
+c"""
+val res0: String =
+a
+| b
+c
+
+scala> :quit

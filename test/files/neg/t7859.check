@@ -1,0 +1,19 @@
+B_2.scala:6: error: not found: value x
+  new p1.A(x).x
+           ^
+B_2.scala:6: error: value x in class A cannot be accessed as a member of p1.A from object Test
+  new p1.A(x).x
+              ^
+B_2.scala:7: error: not found: value x
+  new B(x).x
+        ^
+B_2.scala:7: error: value x is not a member of B
+  new B(x).x
+           ^
+B_2.scala:8: error: not found: value x
+  new C(x).x
+        ^
+B_2.scala:8: error: value x in class C cannot be accessed as a member of C from object Test
+  new C(x).x
+           ^
+6 errors

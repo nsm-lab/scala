@@ -1,0 +1,7 @@
+abstract class TypeAnnotations[@scala.specialized R] extends scala.AnyRef {
+  def this() = { /* compiled code */ }
+  val x: scala.Int = { /* compiled code */ }
+  @scala.specialized
+  type T
+  def compose[@scala.specialized A](x: A, y: R): A = { /* compiled code */ }
+}

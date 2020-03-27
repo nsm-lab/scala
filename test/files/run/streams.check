@@ -1,0 +1,39 @@
+LazyList()
+LazyList()
+true
+true
+true
+
+Array(1)
+LazyList(<not computed>)
+LazyList(<not computed>)
+LazyList(<not computed>)
+LazyList(<not computed>)
+LazyList(1)
+LazyList(<not computed>)
+true
+true
+true
+true
+
+Array(1, 2)
+LazyList(<not computed>)
+LazyList(<not computed>)
+LazyList(1, 2)
+LazyList(<not computed>)
+true
+true
+true
+true
+true
+
+999
+512
+100000
+LazyList(<not computed>)
+LazyList(<not computed>)
+true
+true
+705082704
+
+true

@@ -1,0 +1,11 @@
+t4137.scala:9: error: incompatible type in overriding
+type EPC[X1] = C[X1] (defined in trait A)
+   (Equivalent type required when overriding a type alias.)
+  override type EPC = C[T]
+                ^
+t4137.scala:10: error: incompatible type in overriding
+type EPC2[X1] = C[X1] (defined in trait A)
+   (Equivalent type required when overriding a type alias.)
+  override type EPC2[X1 <: String] = C[X1]
+                ^
+2 errors

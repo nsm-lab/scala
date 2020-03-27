@@ -1,0 +1,27 @@
+#partest java8
+===== JAVA POV =====
+class Foo_1$1
+getEnclosingClass = class Foo_1
+getEnclosingMethod = null
+getEnclosingConstructor = null
+isMemberClass = false
+isLocalClass = false
+isAnonymousClass = true
+
+===== SCALA POV =====
+class 1
+class Foo_1
+#partest !java8
+===== JAVA POV =====
+class Foo_1$Bar
+getEnclosingClass = class Foo_1
+getEnclosingMethod = null
+getEnclosingConstructor = null
+isMemberClass = true
+isLocalClass = false
+isAnonymousClass = false
+
+===== SCALA POV =====
+class Bar
+class Foo_1
+#partest

@@ -1,0 +1,7 @@
+S.scala:2: error: overloaded method m with alternatives:
+  (a: J*)Unit <and>
+  (a: String*)Unit
+ cannot be applied to (Int)
+  J.m(0)
+    ^
+1 error

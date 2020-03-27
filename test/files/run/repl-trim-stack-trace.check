@@ -1,0 +1,31 @@
+
+scala> def f = throw new Exception("Uh-oh")
+def f: Nothing
+
+scala> f
+java.lang.Exception: Uh-oh
+  at f(<console>:XX)
+  ... ??? elided
+
+scala> def f = throw new Exception("")
+def f: Nothing
+
+scala> f
+java.lang.Exception:
+  at f(<console>:XX)
+  ... ??? elided
+
+scala> def f = throw new Exception
+def f: Nothing
+
+scala> f
+java.lang.Exception
+  at f(<console>:XX)
+  ... ??? elided
+
+scala> null.asInstanceOf
+java.lang.NullPointerException
+  at .lzycompute(<synthetic>:8)
+  ... ??? elided
+
+scala> :quit

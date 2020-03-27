@@ -1,0 +1,15 @@
+t7369.scala:8: warning: unreachable code
+    case Tuple1(X) => // unreachable
+                   ^
+t7369.scala:15: warning: unreachable code
+    case Tuple1(true) => // unreachable
+                      ^
+t7369.scala:33: warning: unreachable code
+    case Tuple1(X) => // unreachable
+                   ^
+t7369.scala:42: warning: unreachable code
+    case Tuple1(null) => // unreachable
+                      ^
+error: No warnings can be incurred under -Werror.
+4 warnings
+1 error

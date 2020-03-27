@@ -1,0 +1,11 @@
+[[syntax trees at end of                    parser]] // annodef.java
+package <empty> {
+  object MyAnnotation extends  {
+    def <init>()
+  };
+  abstract trait MyAnnotation extends _root_.java.lang.annotation.Annotation {
+    def <init>();
+    def value(): String
+  }
+}
+

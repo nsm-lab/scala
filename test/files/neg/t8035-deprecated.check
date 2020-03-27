@@ -1,0 +1,21 @@
+t8035-deprecated.scala:4: warning: adaptation of an empty argument list by inserting () is deprecated: this is unlikely to be what you want
+        signature: SetOps.apply(elem: A): Boolean
+  given arguments: <none>
+ after adaptation: SetOps((): Unit)
+  List(1,2,3).toSet()
+                   ^
+t8035-deprecated.scala:7: warning: adaptation of an empty argument list by inserting () is deprecated: this is unlikely to be what you want
+        signature: A(x: T): Foo.A[T]
+  given arguments: <none>
+ after adaptation: new A((): Unit)
+  new A
+  ^
+t8035-deprecated.scala:11: warning: adaptation of an empty argument list by inserting () is deprecated: leaky (Object-receiving) target makes this especially dangerous
+        signature: Format.format(x$1: Object): String
+  given arguments: <none>
+ after adaptation: Format.format((): Unit)
+  sdf.format()
+            ^
+error: No warnings can be incurred under -Werror.
+3 warnings
+1 error

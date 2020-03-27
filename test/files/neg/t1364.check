@@ -1,0 +1,7 @@
+t1364.scala:9: error: incompatible type in overriding
+type T <: AnyRef{type S[-U]} (defined in trait A);
+ found   : AnyRef{type S[U] = U}
+ required:  <: AnyRef{type S[-U]}
+ type T = { type S[U] = U }
+      ^
+1 error

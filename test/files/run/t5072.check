@@ -1,0 +1,8 @@
+
+scala> class C
+class C
+
+scala> Thread.currentThread.getContextClassLoader.loadClass(classOf[C].getName)
+val res0: Class[_] = class C
+
+scala> :quit

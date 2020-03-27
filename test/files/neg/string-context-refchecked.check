@@ -1,0 +1,5 @@
+string-context-refchecked.scala:3: error: cannot override final member:
+final def foo: Int (defined in class C)
+  s"foo${class D extends C { def foo = 2 }; new D}bar"
+                                 ^
+1 error

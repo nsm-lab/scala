@@ -1,0 +1,50 @@
+
+scala> import scala.annotation.showAsInfix
+import scala.annotation.showAsInfix
+
+scala> class &&[T,U]
+class $amp$amp
+
+scala> def foo: Int && Boolean = ???
+def foo: Int && Boolean
+
+scala> def foo: Int && Boolean && String = ???
+def foo: Int && Boolean && String
+
+scala> def foo: Int && (Boolean && String) = ???
+def foo: Int && (Boolean && String)
+
+scala> @showAsInfix type Mappy[T, U] = Map[T, U]
+type Mappy
+
+scala> def foo: Int Mappy (Boolean && String) = ???
+def foo: Int Mappy (Boolean && String)
+
+scala> @showAsInfix(false) class ||[T,U]
+class $bar$bar
+
+scala> def foo: Int || Boolean = ???
+def foo: ||[Int,Boolean]
+
+scala> class &:[L, R]
+class $amp$colon
+
+scala> def foo: Int &: String = ???
+def foo: Int &: String
+
+scala> def foo: Int &: Boolean &: String = ???
+def foo: Int &: Boolean &: String
+
+scala> def foo: (Int && String) &: Boolean = ???
+def foo: (Int && String) &: Boolean
+
+scala> def foo: Int && (Boolean &: String) = ???
+def foo: Int && (Boolean &: String)
+
+scala> trait ^[A, B] { type T } /* scala/bug#10937 */
+trait $up
+
+scala> def x[A, B] : (A ^ B)#T = ???
+def x[A, B]: (A ^ B)#T
+
+scala> :quit

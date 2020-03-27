@@ -1,0 +1,8 @@
+
+scala> def f(x: => Int): Int = x
+def f(x: => Int): Int
+
+scala> f _
+val res0: (=> Int) => Int = <function>
+
+scala> :quit

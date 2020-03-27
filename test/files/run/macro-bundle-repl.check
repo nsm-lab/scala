@@ -1,0 +1,22 @@
+
+scala> import scala.language.experimental.macros
+import scala.language.experimental.macros
+
+scala> import scala.reflect.macros.blackbox.Context
+import scala.reflect.macros.blackbox.Context
+
+scala> class Bar(val c: Context) { def impl = { import c.universe._; c.Expr[Unit](q"()") } };def bar: Unit = macro Bar.impl
+class Bar
+def bar: Unit
+
+scala> bar
+
+scala> class Foo(val c: Context) { def impl = { import c.universe._; c.Expr[Unit](q"()") } }
+class Foo
+
+scala> def foo: Unit = macro Foo.impl
+def foo: Unit
+
+scala> foo
+
+scala> :quit

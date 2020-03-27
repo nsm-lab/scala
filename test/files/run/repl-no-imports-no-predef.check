@@ -1,0 +1,331 @@
+
+scala> 1
+val res0: Int = 1
+
+scala> 1.0
+val res1: Double = 1.0
+
+scala> ()
+
+scala> "abc"
+val res3: String = abc
+
+scala> (1, 2)
+val res4: (Int, Int) = (1,2)
+
+scala> 
+
+scala> { import scala.Predef.ArrowAssoc; 1 -> 2 }
+val res5: (Int, Int) = (1,2)
+
+scala> 1 -> 2
+         ^
+       error: value -> is not a member of Int
+       did you mean >>>?
+
+scala> 
+
+scala> val answer = 42
+val answer: Int = 42
+
+scala> { import scala.StringContext; s"answer: $answer" }
+val res7: String = answer: 42
+
+scala> s"answer: $answer"
+       ^
+       error: not found: value StringContext
+
+scala> 
+
+scala> "abc" + true
+val res9: String = abctrue
+
+scala> 
+
+scala> true + "abc"
+            ^
+       error: value + is not a member of Boolean
+
+scala> 
+
+scala> var x = 10
+var x: Int = 10
+
+scala> var y = 11
+var y: Int = 11
+
+scala> x = 12
+// mutated x
+
+scala> y = 13
+// mutated y
+
+scala> 
+
+scala> 2 ; 3
+       ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+val res11: Int = 3
+
+scala> { 2 ; 3 }
+         ^
+       warning: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses
+val res12: Int = 3
+
+scala> 5 ; 10 ; case object Cow ; 20 ; class Moo { override def toString = "Moooooo" } ; 30 ; def
+bippy = {
+  1 +
+  2 +
+  3 } ; bippy+88+11
+       ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+           ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+                                  ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+                                                                                         ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+object Cow
+class Moo
+def bippy: Int
+val res13: Int = 105
+
+scala> 
+
+scala> object Bovine { var x: scala.List[_] = null } ; case class Ruminant(x: scala.Int) ; bippy * bippy * bippy
+object Bovine
+class Ruminant
+val res14: Int = 216
+
+scala> Bovine.x = scala.List(Ruminant(5), Cow, new Moo)
+// mutated Bovine.x
+
+scala> Bovine.x
+val res15: List[Any] = List(Ruminant(5), Cow, Moooooo)
+
+scala> 
+
+scala> (2)
+val res16: Int = 2
+
+scala> (2 + 2)
+val res17: Int = 4
+
+scala> ((2 + 2))
+val res18: Int = 4
+
+scala>   ((2 + 2))
+val res19: Int = 4
+
+scala>   (  (2 + 2))
+val res20: Int = 4
+
+scala>   (  (2 + 2 )  )
+val res21: Int = 4
+
+scala> 5 ;   (  (2 + 2 )  ) ; ((5))
+       ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+                   ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+val res22: Int = 5
+
+scala> (((2 + 2)), ((2 + 2)))
+val res23: (Int, Int) = (4,4)
+
+scala> (((2 + 2)), ((2 + 2)), 2)
+val res24: (Int, Int, Int) = (4,4,2)
+
+scala> (((((2 + 2)), ((2 + 2)), 2).productIterator ++ scala.Iterator(3)).mkString)
+val res25: String = 4423
+
+scala> 
+
+scala> 55 ; ((2 + 2)) ; (1, 2, 3)
+       ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+                ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+val res26: (Int, Int, Int) = (1,2,3)
+
+scala> 55 ; (x: scala.Int) => x + 1 ; () => ((5))
+       ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+                           ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+val res27: () => Int = <function>
+
+scala> 
+
+scala> () => 5
+val res28: () => Int = <function>
+
+scala> 55 ; () => 5
+       ^
+       warning: a pure expression does nothing in statement position; multiline expressions may require enclosing parentheses
+val res29: () => Int = <function>
+
+scala> () => { class X ; new X }
+val res30: () => AnyRef = <function>
+
+scala> 
+
+scala> def foo(x: scala.Int)(y: scala.Int)(z: scala.Int) = x+y+z
+def foo(x: Int)(y: Int)(z: Int): Int
+
+scala> foo(5)(10)(15)+foo(5)(10)(15)
+val res31: Int = 60
+
+scala> 
+
+scala> scala.List(1) ++ scala.List('a')
+val res32: List[AnyVal] = List(1, a)
+
+scala> 
+
+scala> :paste < EOF
+// Entering paste mode (EOF to finish)
+
+class C { def c = 42 }
+EOF
+
+// Exiting paste mode, now interpreting.
+
+class C
+
+scala> new C().c
+val res33: Int = 42
+
+scala> :paste <| EOF
+// Entering paste mode (EOF to finish)
+
+class D { def d = 42 }
+EOF
+
+// Exiting paste mode, now interpreting.
+
+class D
+
+scala> new D().d
+val res34: Int = 42
+
+scala> 
+
+scala> :paste < EOF
+// Entering paste mode (EOF to finish)
+
+class Dingus
+{
+  private val x = 5
+  def y = Dingus.x * 2
+}
+object Dingus
+{
+  private val x = 55
+}
+EOF
+
+// Exiting paste mode, now interpreting.
+
+class Dingus
+object Dingus
+
+scala> val x = (new Dingus).y
+val x: Int = 110
+
+scala> 
+
+scala> val x1 = 1
+val x1: Int = 1
+
+scala> val x2 = 2
+val x2: Int = 2
+
+scala> val x3 = 3
+val x3: Int = 3
+
+scala> case class BippyBungus()
+class BippyBungus
+
+scala> x1 + x2 + x3
+val res35: Int = 6
+
+scala> :reset
+Resetting interpreter state.
+Forgetting this session history:
+
+1
+1.0
+()
+"abc"
+(1, 2)
+{ import scala.Predef.ArrowAssoc; 1 -> 2 }
+val answer = 42
+{ import scala.StringContext; s"answer: $answer" }
+"abc" + true
+var x = 10
+var y = 11
+x = 12
+y = 13
+2 ; 3
+{ 2 ; 3 }
+5 ; 10 ; case object Cow ; 20 ; class Moo { override def toString = "Moooooo" } ; 30 ; def
+bippy = {
+  1 +
+  2 +
+  3 } ; bippy+88+11
+object Bovine { var x: scala.List[_] = null } ; case class Ruminant(x: scala.Int) ; bippy * bippy * bippy
+Bovine.x = scala.List(Ruminant(5), Cow, new Moo)
+Bovine.x
+(2)
+(2 + 2)
+((2 + 2))
+  ((2 + 2))
+  (  (2 + 2))
+  (  (2 + 2 )  )
+5 ;   (  (2 + 2 )  ) ; ((5))
+(((2 + 2)), ((2 + 2)))
+(((2 + 2)), ((2 + 2)), 2)
+(((((2 + 2)), ((2 + 2)), 2).productIterator ++ scala.Iterator(3)).mkString)
+55 ; ((2 + 2)) ; (1, 2, 3)
+55 ; (x: scala.Int) => x + 1 ; () => ((5))
+() => 5
+55 ; () => 5
+() => { class X ; new X }
+def foo(x: scala.Int)(y: scala.Int)(z: scala.Int) = x+y+z
+foo(5)(10)(15)+foo(5)(10)(15)
+scala.List(1) ++ scala.List('a')
+new C().c
+new D().d
+val x = (new Dingus).y
+val x1 = 1
+val x2 = 2
+val x3 = 3
+case class BippyBungus()
+x1 + x2 + x3
+
+Forgetting all expression results and named terms: $intp, BippyBungus, Bovine, Cow, Dingus, Ruminant, answer, bippy, foo, x, x1, x2, x3, y
+Forgetting defined types: BippyBungus, C, D, Dingus, Moo, Ruminant
+
+scala> x1 + x2 + x3
+       ^
+       error: not found: value x1
+            ^
+       error: not found: value x2
+                 ^
+       error: not found: value x3
+
+scala> val x1 = 4
+val x1: Int = 4
+
+scala> new BippyBungus
+           ^
+       error: not found: type BippyBungus
+
+scala> class BippyBungus() { def f = 5 }
+class BippyBungus
+
+scala> { new BippyBungus ; x1 }
+val res2: Int = 4
+
+scala> :quit

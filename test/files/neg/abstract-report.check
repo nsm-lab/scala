@@ -1,0 +1,15 @@
+abstract-report.scala:1: error: class Unimplemented needs to be abstract.
+Missing implementations for 6 members. Stub implementations follow:
+  // Members declared in scala.collection.IterableOnce
+  def iterator: Iterator[String] = ???
+
+  // Members declared in scala.collection.IterableOps
+  protected def coll: List[String] = ???
+  protected def fromSpecific(coll: scala.collection.IterableOnce[String]): List[String] = ???
+  def iterableFactory: scala.collection.IterableFactory[List] = ???
+  protected def newSpecificBuilder: scala.collection.mutable.Builder[String,List[String]] = ???
+  def toIterable: Iterable[String] = ???
+
+class Unimplemented extends scala.collection.IterableOps[String, List, List[String]] { }
+      ^
+1 error

@@ -1,0 +1,6 @@
+t0209.scala:15: error: type mismatch;
+ found   : C
+ required: stabilizer$1.type
+    (new B: A).f(new C)
+                 ^
+1 error

@@ -1,0 +1,6 @@
+t5340.scala:15: error: type mismatch;
+ found   : Quux[MyApp.r.E,MyApp.s.E]
+ required: Int
+  (new Quux[r.E, s.E]): Int // fails due to pre-stripping implicits which
+   ^
+1 error

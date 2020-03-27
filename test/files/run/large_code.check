@@ -1,0 +1,2 @@
+error: Error while emitting BigEnoughToFail
+Method too large: BigEnoughToFail.tooLong ()V

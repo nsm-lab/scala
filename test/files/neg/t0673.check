@@ -1,0 +1,4 @@
+Test.scala:2: error: class JavaClass.InnerClass is not a value
+  val x = JavaClass.InnerClass
+                    ^
+1 error

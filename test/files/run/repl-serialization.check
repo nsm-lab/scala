@@ -1,0 +1,27 @@
+== evaluating lines
+val extract: AnyRef => Unit = <function1>
+  evaluating x
+val x: Int = 0
+def getX(): Int
+class U
+lazy val y: Int // unevaluated
+  evaluating z
+  evaluating zz
+class D
+val z: Int = 0
+val zz: Int = 0
+object O
+class TestClass
+val t: TestClass = TestClass
+import t._
+class A
+type AA
+constructing U
+val u: U = U
+== evaluating lambda
+  evaluating y
+  evaluating O
+  constructing A
+== reconstituting into a fresh classloader
+== evaluating reconstituted lambda
+  constructing A
